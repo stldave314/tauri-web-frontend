@@ -1,0 +1,16 @@
+{
+  "name": "tauri-web-frontend-bindings",
+  "version": "1.0.0",
+  "description": "JavaScript bindings for the Tauri Web Frontend Native API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tauri",
+    "bindings",
+    "native"
+  ],
+  "author": "",
+  "license": "MIT"
+}
