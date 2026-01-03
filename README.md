@@ -59,12 +59,23 @@ The application exposes native commands (like `greet`) to the loaded page. To us
 
 The bindings library is located in `js-lib/`. You can publish this package or include it directly in your frontend project.
 
-```javascript
-import { greet } from 'tauri-web-frontend-bindings';
 
-// Call the native Rust function
-greet('User').then(msg => console.log(msg));
-```
+## JavaScript API
+
+The web application loaded by Tauri has access to the `window.__TAURI__` object, exposing the full Tauri API (if enabled).
+
+In addition, we provide a wrapper library `tauri-web-frontend-bindings` with the following helper functions:
+
+### `greet(name: string): Promise<string>`
+Sends a greeting request to the Rust backend.
+- **Example**: `match greet('Dave') { Ok(msg) => console.log(msg) }`
+
+### `isTauriAvailable(): boolean`
+Checks if the application is running within the Tauri context.
+
+### Official API
+For the complete list of available system APIs (File System, Dialog, standard Window controls, etc.), please refer to the [Tauri v2 API Documentation](https://v2.tauri.app/reference/javascript/).
+
 
 ## Configuration
 
