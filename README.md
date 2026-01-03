@@ -65,3 +65,27 @@ import { greet } from 'tauri-web-frontend-bindings';
 // Call the native Rust function
 greet('User').then(msg => console.log(msg));
 ```
+
+## Configuration
+
+The application accepts several command-line arguments to customize its behavior and appearance.
+
+### Window Management
+
+| Argument | Description | Example |
+| :--- | :--- | :--- |
+| `--url <URL>` | The URL to load on startup. | `--url https://google.com` |
+| `--width <pixels>` | Set the initial window width. | `--width 1024` |
+| `--height <pixels>` | Set the initial window height. | `--height 768` |
+| `--fullscreen` | Start the application in fullscreen mode. | `--fullscreen` |
+| `--minimized` | Start the application minimized. | `--minimized` |
+| `--no-resizable` | Disable window resizing by the user. | `--no-resizable` |
+| `--frameless` | Remove the window frame and title bar. | `--frameless` |
+
+### Security & Restrictions
+
+| Argument | Description | Example |
+| :--- | :--- | :--- |
+| `--allowed-domains <list>` | Comma-separated list of domains allowed for navigation. Navigating to other domains will be blocked. | `--allowed-domains google.com,github.com` |
+| `--api-domains <list>` | Comma-separated list of domains allowed to use the native API (bindings). | `--api-domains myapp.com` |
+
