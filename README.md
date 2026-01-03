@@ -74,7 +74,7 @@ Sends a greeting request to the Rust backend.
 Checks if the application is running within the Tauri context.
 
 ### Official API
-For the complete list of available system APIs (File System, Dialog, standard Window controls, etc.), please refer to the [Tauri v2 API Documentation](https://v2.tauri.app/reference/).
+For the complete list of available system APIs (File System, Dialog, standard Window controls, etc.), please refer to the [Tauri v2 Documentation](https://v2.tauri.app/).
 
 
 ## Configuration
